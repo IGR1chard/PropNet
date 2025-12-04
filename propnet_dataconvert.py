@@ -22,7 +22,7 @@ def npz_to_h5(npz_path, h5_path, compression=None):
 
 def h5_to_npz(h5_path, npz_path):
     with h5py.File(h5_path, "r") as h5f:
-        data_dict = {key: h5f[key][()] for key in h5f.keys()}  # 读取全部 dataset
+        data_dict = {key: h5f[key][()] for key in h5f.keys()}  
     
     np.savez(npz_path, **data_dict)
     return data_dict
@@ -79,4 +79,5 @@ if __name__ == "__main__":
 
     # print("🚀 Step 3: Verification...")
     # compare_npz(orig_npz_data, np.load(new_npz_path))
+
 
