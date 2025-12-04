@@ -44,14 +44,14 @@ def initial_value_load(fpath,N=2626,T=106):
     fvol_all = loaded_data['fvol_all'] 
     p_all = loaded_data['p_all'] * 0.1 #dyne/cm2-->Pa
     
-    #归一化是针对每一类数据的， 如流体速度归一化用的最大最小是全时间的，所以在画图的时候单一时刻的值可能会出现最大最小不为1 0的情况
+    
     scaler = MinMaxScaler()
     all_data = np.hstack([x_all, y_all, z_all, t_all, pu_all, pv_all, pw_all, fu_all, fv_all, fw_all, fvol_all, p_all])
     all_data_normalized = scaler.fit_transform(all_data)
-    # 保存
+    #
     # joblib.dump(scaler, 'E:/fluentmodel/dao/scaler.pkl')
 
-    # 分开各个特征
+    # 
     x_norm, y_norm, z_norm, t_norm = all_data_normalized[:, 0], all_data_normalized[:, 1], all_data_normalized[:, 2], all_data_normalized[:, 3]
     pu_norm, pv_norm, pw_norm = all_data_normalized[:, 4], all_data_normalized[:, 5], all_data_normalized[:, 6]
     fu_norm, fv_norm, fw_norm = all_data_normalized[:, 7], all_data_normalized[:, 8], all_data_normalized[:, 9]
