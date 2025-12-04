@@ -13,7 +13,7 @@ def npz_to_h5(npz_path, h5_path, compression=None):
         for key in npz_data.files:
             h5f.create_dataset(key, data=npz_data[key], compression=compression)
 
-    return npz_data  # 供后续验证使用
+    return npz_data  
 
 
 # -------------------------------
@@ -65,7 +65,7 @@ def compare_npz(npz1, npz2):
 # -------------------------------
 
 if __name__ == "__main__":
-    # 修改这里为你的 npz 文件路径
+    
     # original_npz_path = "E:/propnet-data/ori_data_arrays.npz"
 
     h5_path = "E:/propnet-data/data_arrays.h5"
@@ -79,3 +79,4 @@ if __name__ == "__main__":
 
     # print("🚀 Step 3: Verification...")
     # compare_npz(orig_npz_data, np.load(new_npz_path))
+
