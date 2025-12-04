@@ -15,7 +15,8 @@ This repository provides:
 
 If you use this software, please cite:
 
-> **PropNet: A Physics-Informed Neural Network for Efficient Prediction of Proppant Transport in Hydraulic Fractures**  
+> **PropNet: A Physics-Informed Neural Network for Efficient Prediction of Proppant Transport in Hydraulic Fractures**
+> Ji Lu, Botao Lin*, Yan Jin, Siyuan Chen, Junjie Shentu, Noura Al Moubayed   
 > *(journal information will be added upon publication)*
 
 ---
