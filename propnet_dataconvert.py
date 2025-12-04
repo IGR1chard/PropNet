@@ -71,13 +71,14 @@ if __name__ == "__main__":
     h5_path = "E:/propnet-data/data_arrays.h5"
     new_npz_path = "E:/propnet-data/data_arrays.npz"
 
-    # print("🚀 Step 1: NPZ → H5")
+    # print("Step 1: NPZ → H5")
     # orig_npz_data = npz_to_h5(original_npz_path, h5_path, compression="gzip")
 
-    # print("🚀 Step 2: H5 → NPZ")
+    # print("Step 2: H5 → NPZ")
     new_npz_data = h5_to_npz(h5_path, new_npz_path)
 
-    # print("🚀 Step 3: Verification...")
+    # print("Step 3: Verification...")
     # compare_npz(orig_npz_data, np.load(new_npz_path))
+
 
 
