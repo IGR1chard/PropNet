@@ -36,7 +36,7 @@ propnet_pred.py         → Testing / prediction script
 well-trained.pt         → Example trained model
 ```
 ### **Setup, Requirements, and Usage**
-
+Copy the repository folder ( Downloads from the menu on the left of this page) in Windows 64bit. In alternative use any other machine with python3 installed.
 PropNet requires Python ≥ 3.8 and the following dependencies:
 ```
 numpy  
